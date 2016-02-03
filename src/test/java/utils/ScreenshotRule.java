@@ -21,14 +21,13 @@ public class ScreenshotRule extends TestWatcher {
 
     @Override
     protected void failed(Throwable e, Description description) {
-        System.out.println("*****************");
+
         File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         try {
             FileUtils.copyFile(scrFile, new File(description.getMethodName() + ".png"));
         } catch (IOException e1) {
             e1.printStackTrace();
         }
-        System.out.println("************9999999999*****");
         System.out.println("ScreenShotRule : Test case failed : "+ description.getMethodName());
     }
 

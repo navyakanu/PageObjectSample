@@ -35,7 +35,7 @@ public class BaseClassStep {
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
         screenShotRule.setDriver(driver);
-        LoginDetails loginDetails =new LoginDetails("http://accountsdemo.herokuapp.com/","navyab@thoughtworks.com","Navya@1991");
+        LoginDetails loginDetails =new LoginDetails("http://accountsdemo.herokuapp.com/","********","*******");
         driver.navigate().to(loginDetails.getLoginUrl());
 
         LoginPage login =new LoginPage(driver);
@@ -45,7 +45,7 @@ public class BaseClassStep {
 
     @After
     public void tearDown(){
-     //driver.quit
+
 
     }
 

@@ -25,7 +25,7 @@ public class SampleTest extends BaseClassStep  {
     public void firsttest(){
 
         logger.info("Starting test for selecting client");
-        ClientDetails clientDetails =new ClientDetails("tcs","ThoughtWorks","04/04/1991","jaggu@thoughtworks.com");
+        ClientDetails clientDetails =new ClientDetails("tcs","*******","04/04/1991","*******");
 
         DashBoardPage dashBoardPage =new DashBoardPage(driver);
         dashBoardPage.NavigateToClientHomePage();
@@ -41,16 +41,12 @@ public class SampleTest extends BaseClassStep  {
         clientDetailsPage.EditClientDetails(clientDetails.getClient_Email());
 
 
-
-
-
-
     }
 
     @Test
     public void AddQuotaion(){
 
-        ClientDetails clientDetails =new ClientDetails("tcs","ThoughtWorks","04/04/1991","jaggu@thoughtworks.com");
+        ClientDetails clientDetails =new ClientDetails("tcs","********","04/04/1991","*******");
 
         DashBoardPage dashBoardPage =new DashBoardPage(driver);
         dashBoardPage.NavigateToClientHomePage();
@@ -73,7 +69,7 @@ public class SampleTest extends BaseClassStep  {
     @Test
     public void PrintTest()
     {
-        System.out.println("Navya");
+        System.out.println("Page Object Sample");
     }
 
 }
